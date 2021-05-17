@@ -5,14 +5,16 @@ import Form from "./components/Form";
 import FormContainer from "./components/FormContainer"
 import Routes from "./Routes"
 import axios from 'axios' 
+import MapPage from "./components/MapPage"
 
 function App() {
   return (
     <div className="App">
-      <AppBar />
-      <FormContainer>
+      <AppBar /> 
+      {/* <FormContainer>
         <Form/>
-      </FormContainer>
+      </FormContainer>  */}
+      <MapPage />
     </div>
   );
 }

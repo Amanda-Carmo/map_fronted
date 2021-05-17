@@ -11,12 +11,10 @@ import{
 
 export default function MapPage() {
   return (
-    <Route path="https://intense-hollows-61984.herokuapp.com/api/pais/">
         <div>
             <AppBar/>
             <h3 >Map</h3>
         </div>
-    </Route>    
 
   );
 }

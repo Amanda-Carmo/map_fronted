@@ -42,9 +42,9 @@ export default function Form() {
 
   const classes = useStyles();
 
-  const [vac_propria, setVacpropria] = React.useState('sim');
+  const [vac_propria, setVacpropria] = React.useState('True');
   const [vac_pais, setVacc] = React.useState('')
-  const [disponibilidade_quarentena, setDisp] = React.useState('sim2');
+  const [disponibilidade_quarentena, setDisp] = React.useState('True');
   const [continente, setCont] = React.useState('');
   const [idade, setIdade] = React.useState('')
 
@@ -70,7 +70,7 @@ export default function Form() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios.post("/pais",{
+    axios.post("http://127.0.0.1:8000/api/pais/",{
       vac_propria: vac_propria,
       vac_pais: vac_pais,
       disponibilidade_quarentena: disponibilidade_quarentena,
@@ -98,8 +98,8 @@ export default function Form() {
             <FormControl component="fieldset">
                 <FormLabel component="text">Estará vacinado até o momento da viagem?</FormLabel>
                 <RadioGroup aria-label="resp1" name="resp_1" value={vac_propria} onChange={handleVacPChange}>
-                  <FormControlLabel value="sim" control={<Radio />} label="Sim" />
-                  <FormControlLabel value="nao" control={<Radio />} label="Nao" />
+                  <FormControlLabel value="True" control={<Radio />} label="Sim" />
+                  <FormControlLabel value="False" control={<Radio />} label="Nao" />
                 </RadioGroup>
             </FormControl>
             <span>{" "}</span>
@@ -124,8 +124,8 @@ export default function Form() {
             <FormControl component="fieldset">
                 <FormLabel component="legend">Está disposto a fazer quarentena antes de viajar conforme requisitado pelo país?</FormLabel>
                 <RadioGroup aria-label="resp3" name="resp_3" value={disponibilidade_quarentena} onChange={handleDispChange}>
-                  <FormControlLabel value="sim2" control={<Radio />} label="Sim" />
-                  <FormControlLabel value="nao2" control={<Radio />} label="Nao" />
+                  <FormControlLabel value="True" control={<Radio />} label="Sim" />
+                  <FormControlLabel value="False" control={<Radio />} label="Nao" />
                 </RadioGroup>
             </FormControl>   
             <span>{'  '}</span>
@@ -145,7 +145,7 @@ export default function Form() {
                 <MenuItem value="">
                   <em>Sem preferências</em>
                 </MenuItem>
-                <MenuItem value={"África"}>África</MenuItem>
+                <MenuItem value={"[Italy,Brazil]"}>África</MenuItem>
                 <MenuItem value={"Américas"}>Américas</MenuItem>
                 <MenuItem value={"Ásia"}>Ásia</MenuItem>
                 <MenuItem value={"Europa"}>Europa</MenuItem>
