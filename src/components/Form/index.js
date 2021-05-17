@@ -69,7 +69,7 @@ export default function Form() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios.post("https://agile-meadow-58579.herokuapp.com/",{
+    axios.post("http://127.0.0.1:8000/api/pais/",{
       vac_propria: vac_propria,
       vac_pais: vac_pais,
       disponibilidade_quarentena: disponibilidade_quarentena,
@@ -77,6 +77,7 @@ export default function Form() {
       idade: idade,
     })
     .then(() => {
+      console.log(vac_propria)
       setVacpropria('');
       
     })
