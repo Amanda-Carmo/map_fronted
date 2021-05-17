@@ -3,6 +3,7 @@ import AppBar from "./components/AppBar";
 import "./App.css";
 import Form from "./components/Form";
 import FormContainer from "./components/FormContainer"
+import Routes from "./Routes"
 import axios from 'axios' 
 
 function App() {
@@ -12,7 +13,6 @@ function App() {
       <FormContainer>
         <Form/>
       </FormContainer>
-      
     </div>
   );
 }

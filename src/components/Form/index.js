@@ -10,7 +10,8 @@ import Select from '@material-ui/core/Select';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import { makeStyles } from '@material-ui/core/styles';
-import axios from 'axios'
+import axios from 'axios';
+import MapPage from '../MapPage';
 import{
   BrowserRouter as Router, 
   Switch,
@@ -69,7 +70,7 @@ export default function Form() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios.post("http://127.0.0.1:8000/api/pais/",{
+    axios.post("/pais",{
       vac_propria: vac_propria,
       vac_pais: vac_pais,
       disponibilidade_quarentena: disponibilidade_quarentena,
@@ -77,15 +78,15 @@ export default function Form() {
       idade: idade,
     })
     .then(() => {
-      console.log(vac_propria)
       setVacpropria('');
       
     })
   } 
 
   return (
-      <div className="form">
-          
+    <Router>
+      
+      <div className="form">              
           <div className="text">
               <h1>Bem vindo ao Covid-map!</h1>
               <p>Preencha o formulário conforme seus requisitos para viajar e retornaremos o momento e os países ideais para realizá-la.</p>
@@ -174,10 +175,14 @@ export default function Form() {
             <div className="btn-container">
               <button onClick={handleSubmit} type="submit" className="btn">Enviar</button>  
               <span>{'        '}</span>
-              <button className="btn">Pular</button>    
+              <Link to="pais/" className="btn2">Pular</Link>    
             </div>   
-          </div>    
+          </div>  
+            
       </div>
+          
+         
+    </Router>
     );
 
 }

@@ -38,12 +38,26 @@ div {
     color: white;
     border-color: #f50056;
     width: 70%;
-    font-size: 100%;
+    font-size: 90%;
     border-radius: 13px;
     box-shadow:  3px 3px rgba(0, 0, 0, 0.15), 0 6px 6px rgba(0, 0, 0, 0.40);
     align-self: center;
 
 }
+
+
+.btn2{
+    background-color: #f50056;
+    color: white;
+    border-color: #f50056;
+    width: 100%;
+    font-size: 95%;
+    border-radius: 13px;
+    box-shadow:  3px 3px rgba(0, 0, 0, 0.15), 0 6px 6px rgba(0, 0, 0, 0.40);
+    align-self: center;
+
+}
+
 
 
 
