@@ -1,5 +1,6 @@
 import React from "react";
 import "./index.css";
+import history from '../../history'; 
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -175,7 +176,7 @@ export default function Form() {
             <div className="btn-container">
               <button onClick={handleSubmit} type="submit" className="btn">Enviar</button>  
               <span>{'        '}</span>
-              <Link to='/pais' className="btn2">Pular</Link>    
+              <Link to='/pais'onClick={() => { history.push('/pais');}} className="btn2">Pular</Link>
             </div>   
           </div>  
             
