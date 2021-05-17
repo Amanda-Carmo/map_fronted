@@ -1,0 +1,55 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-top: 6%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+    flex-grow: 1;
+}
+
+.text-form{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    z-index: 1;
+}
+
+div {
+    white-space: pre-wrap;
+}
+
+.btn-container{
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    
+}
+
+.btn{
+    background-color: #f50056;
+    color: white;
+    border-color: #f50056;
+    width: 70%;
+    font-size: 100%;
+    border-radius: 13px;
+    box-shadow:  3px 3px rgba(0, 0, 0, 0.15), 0 6px 6px rgba(0, 0, 0, 0.40);
+    align-self: center;
+
+}
+
+
+
+
+
+
+
+
+

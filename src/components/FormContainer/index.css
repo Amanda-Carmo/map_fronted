@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-left: 15%;
+    margin-left: 15%;
+  }
+  
+  .form-container {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    place-content: space-evenly; 
+    background-color: #e3fdff;
+}
