@@ -3,18 +3,18 @@ import AppBar from "./components/AppBar";
 import "./App.css";
 import Form from "./components/Form";
 import FormContainer from "./components/FormContainer"
-import Routes from "./Routes"
 import axios from 'axios' 
 import MapPage from "./components/MapPage"
+import Routes from './routes.jsx';
 
 function App() {
   return (
     <div className="App">
       <AppBar /> 
-      {/* <FormContainer>
-        <Form/>
-      </FormContainer>  */}
-      <MapPage />
+      <FormContainer>
+        <Routes />
+      </FormContainer> 
+      {/* <MapPage /> */}
     </div>
   );
 }

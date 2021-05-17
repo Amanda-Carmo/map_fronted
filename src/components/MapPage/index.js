@@ -1,20 +1,18 @@
 import React from "react";
 import AppBar from "../AppBar";
 import "./index.css";
-import{
-    BrowserRouter as Router, 
-    Switch,
-    Route, 
-    Link, 
-    Redirect,
-    } from "react-router-dom";
+import { VectorMap } from "react-jvectormap"
+
 
 export default function MapPage() {
   return (
         <div>
-            <AppBar/>
-            <h3 >Map</h3>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jvectormap/2.0.4/jquery-jvectormap.css" type="text/css" media="screen"/>
+            <p>oioioi</p>
+            
+            
         </div>
 
   );
 }
+
