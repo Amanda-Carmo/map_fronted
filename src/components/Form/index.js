@@ -71,16 +71,20 @@ export default function Form() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios.post("http://127.0.0.1:8000/api/pais/",{
+    let sla = {
       vac_propria: vac_propria,
       vac_pais: vac_pais,
       disponibilidade_quarentena: disponibilidade_quarentena,
       continente: continente, 
       idade: idade,
-    })
-    .then(() => {
+    }
+    axios.post("http://127.0.0.1:8000/api/pais/",sla)
+    .then((resp) => {
       setVacpropria('');
-      
+      history.push({
+        pathname: '/pais' });
+      let teste =  JSON.stringify(sla);
+      localStorage.setItem('data', teste);
     })
   } 
 
