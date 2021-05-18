@@ -90,8 +90,8 @@ export default function Form() {
       <div className="form">              
           <div className="text">
               <h1>Bem vindo ao Covid-map!</h1>
-              <p>Preencha o formulário conforme seus requisitos para viajar e retornaremos o momento e os países ideais para realizá-la.</p>
-              <p>Caso não tenha requisitos, basta apertar o botão "pular".</p>
+              <p>Preencha o formulário conforme seus requisitos para viajar, aperte em "enviar" e depois em "prosseguir" e retornaremos o momento e os países ideais para realizá-la.</p>
+              <p>Caso não tenha requisitos, basta apertar o botão "prosseguir".</p>
           </div>
           {/* <span>{" "}</span>
           <span>{" "}</span> */}
@@ -176,7 +176,7 @@ export default function Form() {
             <div className="btn-container">
               <button onClick={handleSubmit} type="submit" className="btn">Enviar</button>  
               <span>{'        '}</span>
-              <Link to='/pais'onClick={() => { history.push('/pais');}} className="btn2">Pular</Link>
+              <Link to='/pais'onClick={() => { history.push('/pais');}} className="btn2">Prosseguir</Link>
             </div>   
           </div>  
             

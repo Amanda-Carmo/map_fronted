@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import App from "../../App";
 import AppBar from "../AppBar";
 import "./index.css";
 import { WorldMap } from "react-svg-worldmap"
+import Popup from "./Popup"; 
 
 const ReactDOM = require('react-dom');
 
+function MapPage(){
 
+  const [isOpen, setIsOpen] = useState(false);
+ 
+  const togglePopup = () => {
+    setIsOpen(!isOpen);
+  }
 
-export default function MapPage() {
   const data =
     [
       { country: "cn", value: 1389618778 }, // china
@@ -24,14 +30,29 @@ export default function MapPage() {
     
 
   return (
-    <div className="map-div" >
-       <WorldMap className="map" color="red" title="Países disponíveis para você viajar, conforme suas condições" value-suffix="people" size="lg" data={data} />
+    <div>
+      <div className="map-div" >
+        <WorldMap onclick={togglePopup} onClick={togglePopup} className="map" color="red" title="Países disponíveis para você viajar, conforme suas condições" value-suffix="people" size="lg" data={data} />
+      </div>
+      
+      {isOpen && <Popup
+        content={<>
+          <b>País selecionado!</b>
+        </>}
+      handleClose={togglePopup}
+    />}
+      
     </div>
   )
 }
 
 
-// ReactDOM.render(
-//   <App />,
-//   document.getElementById('react-app')
-// )
+export default MapPage;
+
+// const clickAction = (event: React.MouseEvent<SVGElement, MouseEvent>, countryName: string, isoCode: string, value: string, prefix?: string, suffix?: string) => {
+//   //Your action on click that you want to perform see example in the examples folder called onclick-example
+//   modal.style.display = "block";
+//   closeBtn.addEventListener("click", ()=>{
+//     modal.style.display = "none"
+//   })
+// }
